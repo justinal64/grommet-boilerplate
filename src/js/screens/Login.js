@@ -16,7 +16,6 @@ import { navEnable } from '../actions/nav';
 import { pageLoaded } from './utils';
 
 class Login extends Component {
-
   constructor() {
     super();
     this._onSubmit = this._onSubmit.bind(this);
@@ -34,9 +33,7 @@ class Login extends Component {
   _onSubmit(fields) {
     const { dispatch } = this.props;
     const { router } = this.context;
-    dispatch(login(fields.username, fields.password, () => (
-      router.history.push('/dashboard')
-    )));
+    dispatch(login(fields.username, fields.password, () => router.history.push('/')));
   }
 
   render() {
@@ -44,11 +41,18 @@ class Login extends Component {
 
     return (
       <Split flex='left' separator={true}>
-
         <Article>
-          <Section full={true} colorIndex='brand' texture='url(img/splash.png)'
-            pad='large' justify='center' align='center'>
-            <Heading tag='h1'><strong>Portfolio</strong></Heading>
+          <Section
+            full={true}
+            colorIndex='brand'
+            texture='url(img/splash.png)'
+            pad='large'
+            justify='center'
+            align='center'
+          >
+            <Heading tag='h1'>
+              <strong>Portfolio</strong>
+            </Heading>
             <Paragraph align='center' size='large'>
               Development with Grommet is cool.
             </Paragraph>
@@ -57,16 +61,18 @@ class Login extends Component {
 
         <Sidebar justify='between' align='center' pad='none' size='large'>
           <span />
-          <LoginForm align='start'
+          <LoginForm
+            align='start'
             logo={<Logo className='logo' colorIndex='brand' />}
             title='Portfolio'
-            onSubmit={this._onSubmit} errors={[error]} usernameType='text' />
-          <Footer direction='row' size='small'
-            pad={{ horizontal: 'medium', vertical: 'small' }}>
+            onSubmit={this._onSubmit}
+            errors={[error]}
+            usernameType='text'
+          />
+          <Footer direction='row' size='small' pad={{ horizontal: 'medium', vertical: 'small' }}>
             <span className='secondary'>&copy; 2017 Grommet Labs</span>
           </Footer>
         </Sidebar>
-
       </Split>
     );
   }
@@ -75,8 +81,8 @@ class Login extends Component {
 Login.propTypes = {
   dispatch: PropTypes.func.isRequired,
   session: PropTypes.shape({
-    error: PropTypes.string
-  })
+    error: PropTypes.string,
+  }),
 };
 
 Login.contextTypes = {
@@ -84,7 +90,7 @@ Login.contextTypes = {
 };
 
 const select = state => ({
-  session: state.session
+  session: state.session,
 });
 
 export default connect(select)(Login);
