@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import { initialize } from './actions/session';
 import store from './store';
 import Main from './components/Main';
-import Test from './components/Test';
 
 const locale = getCurrentLocale();
 addLocaleData(en);
@@ -25,7 +24,7 @@ if (window.location.pathname !== '/login') {
 export default () =>
   <Provider store={store}>
     <IntlProvider locale={localeData.locale} messages={localeData.messages}>
-      {/* <Main /> */}
-      <Test />
+      <Main />
+      {/* <Test /> */}
     </IntlProvider>
   </Provider>;
