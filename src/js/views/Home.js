@@ -2,11 +2,11 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import App from 'grommet/components/App';
-import Split from 'grommet/components/Split';
+// import App from 'grommet/components/App';
+// import Split from 'grommet/components/Split';
 
-import NavSidebar from './NavSidebar';
-import { navResponsive } from '../actions/nav';
+// import NavSidebar from './NavSidebar';
+// import { navResponsive } from '../actions/nav';
 
 // import Login from '../screens/Login';
 // import Dashboard from '../screens/Dashboard';
@@ -18,9 +18,9 @@ import Article from 'grommet/components/Article';
 import Headline from 'grommet/components/Headline';
 import Section from 'grommet/components/Section';
 
-class Test extends Component {
-  constructor() {
-    super();
+class Home extends Component {
+  constructor(props) {
+    super(props);
   }
 
   render() {
@@ -54,7 +54,7 @@ class Test extends Component {
   }
 }
 
-// Test.propTypes = {
+// Home.propTypes = {
 //   dispatch: PropTypes.func.isRequired,
 //   nav: PropTypes.shape({
 //     active: PropTypes.bool,
@@ -67,5 +67,5 @@ class Test extends Component {
 //   nav: state.nav,
 // });
 
-// export default connect(select)(Test);
-export default Test;
+// export default connect(select)(Home);
+export default Home;

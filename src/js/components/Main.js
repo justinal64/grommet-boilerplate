@@ -13,6 +13,7 @@ import Dashboard from '../screens/Dashboard';
 import Tasks from '../screens/Tasks';
 import Task from '../screens/Task';
 import NotFound from '../screens/NotFound';
+import Home from '../views/Home';
 
 class Main extends Component {
   constructor() {
@@ -37,9 +38,9 @@ class Main extends Component {
       <App centered={false}>
         <Router>
           <Split priority={priority} flex='right' onResponsive={this._onResponsive}>
-            {nav}
+            {/* {nav} */}
             <Switch>
-              <Route exact={true} path='/' component={Dashboard} />
+              <Route exact={true} path='/' component={Home} />
               <Route path='/dashboard' component={Dashboard} />
               <Route path='/login' component={Login} />
               <Route path='/tasks/:id' component={Task} />
