@@ -10,7 +10,7 @@ class Projects extends Component {
 
   render() {
     return (
-      <div className='projects-bg'>
+      <div className='projects-bg' id='projects'>
         <Section pad='large' justify='center' align='center' full='vertical'>
           <Headline margin='none'>Projects</Headline>
         </Section>
