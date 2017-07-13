@@ -15,17 +15,25 @@ class Navigation extends Component {
 
   render() {
     return (
-      <Header fixed={false} float={false} splash={false} size='small'>
-        <Box flex={true} justify='end' direction='row' responsive={false}>
-          <Menu icon={<Actions />} dropAlign={{ right: 'right' }}>
-            <Anchor href='#' className='active'>
-              First
-            </Anchor>
-            <Anchor href='#'>Second</Anchor>
-            <Anchor href='#'>Third</Anchor>
-          </Menu>
-        </Box>
-      </Header>
+      <Box direction='row' justify='start' wrap={true} pad='medium' margin='small'>
+        <ul>
+          <li>
+            <a className='nav_link' href='#projects'>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a className='nav_link' href='#contact'>
+              Contact
+            </a>
+          </li>
+          <li>
+            <a className='nav_link' href='#resume'>
+              Resume
+            </a>
+          </li>
+        </ul>
+      </Box>
     );
   }
 }
