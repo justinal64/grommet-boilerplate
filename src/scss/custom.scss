@@ -73,14 +73,15 @@ ul li {
     font-size: 2rem;
 }
 
-ul li a.nav_link {
+ul li a.nav_link,
+.grommet a:not(.grommetux-anchor):not(.grommetux-button):visited {
     text-decoration: none;
-    transition: opacity .25s ease-out;
-    color: #fff;
+    color: #333;
     font-size: 2rem;
 }
 
 .grommet a:not(.grommetux-anchor):not(.grommetux-button):hover {
     color: #fff;
+    transition: opacity .25s ease-out;
     text-decoration: none;
 }

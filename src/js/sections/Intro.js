@@ -15,26 +15,7 @@ class Intro extends Component {
     return (
       <div className='intro-bg'>
         <Section pad='large' justify='center' align='center' full='vertical'>
-          <Box direction='row' justify='start' wrap={true} pad='medium' margin='small'>
-            <ul>
-              <li>
-                <a className='nav_link' href='#projects'>
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a className='nav_link' href='#contact'>
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a className='nav_link' href='#resume'>
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </Box>
-
+          <Navigation />
           <Headline margin='none'>Intro</Headline>
         </Section>
       </div>
