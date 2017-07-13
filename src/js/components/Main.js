@@ -37,8 +37,6 @@ class Main extends Component {
     return (
       <App centered={false}>
         <Router>
-          {/* <Split priority={priority} flex='right' onResponsive={this._onResponsive}> */}
-          {/* {nav} */}
           <Switch>
             <Route exact={true} path='/' component={Home} />
             <Route path='/dashboard' component={Dashboard} />
@@ -47,7 +45,6 @@ class Main extends Component {
             <Route path='/tasks' component={Tasks} />
             <Route path='/*' component={NotFound} />
           </Switch>
-          {/* </Split> */}
         </Router>
       </App>
     );

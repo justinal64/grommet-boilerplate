@@ -9,6 +9,7 @@ import Intro from '../sections/Intro';
 import Projects from '../sections/Projects';
 import AboutMe from '../sections/AboutMe';
 import Contact from '../sections/Contact';
+import Test from '../sections/Test';
 
 class Home extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Home extends Component {
   render() {
     return (
       <Article scrollStep={true} controls={true}>
+        <Test />
         <Intro />
         <AboutMe />
         <Projects />
